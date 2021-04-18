@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: var(--cor-fundo-temporario);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+:root {
+  --cor-menus: #882cde;
+  --cor-botoes: #ffffff;
+  --cor-fundo-temporario: #9cd1ff;
+}
+.header {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+.menu {
+  overflow: hidden;
+  background-color: var(--cor-menus);
+}
+.menu a {
+  float: left;
+  display: block;
+  color: var(--cor-botoes);
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+.menu a:hover {
+  background-color: var(--cor-botoes);
+  color: black;
+  opacity: 0.6;
+}
+.conteudo {
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+
