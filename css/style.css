@@ -216,12 +216,12 @@ body {
 .sign-in-js .cont-cadastro .segunda-coluna {
   z-index: -1;
   position: relative;
-  animation: fundocorre 1s;
+  animation: fundocorre 1.5s;
 }
 .sign-up-js .cont-login .segunda-coluna {
   z-index: -1;
   position: relative;
-  animation: fundovolta 1s;
+  animation: fundovolta 1.5s;
 }
 /*animaçao do css*/
 
