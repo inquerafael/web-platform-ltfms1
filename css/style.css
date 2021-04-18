@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: gray; /*temporario*/
+}
+.cont {
+  border-radius: 15px;
+  background-color: white;
+  width: 80%;
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.cont::before {
+  content: "";
+  position: absolute;
+  background-color: #5de8b7;
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  /*temporario*/
+  left: 0;
+}
+.cont-cadastro {
+  display: flex;
+}
+.cont-cadastro .segunda-coluna {
+  z-index: 12;
+}
+.titulo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.titulo-bemvindo {
+  color: white;
+}
+.titulo-criarconta {
+  color: #5de8b7;
+}
+.descricao {
+  font-size: 14px;
+  line-height: 20px;
+}
+.descricao-primaria {
+  color: white;
+}
+.descricao-secundaria {
+  color: gray;
+}
+.btn {
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 10px;
+  padding: 10px 50px;
+  font-weight: bold;
+
+  align-self: center;
+  border: none;
+  margin-top: 1rem;
+}
+.btn-primaria {
+  background-color: transparent;
+  border: 1px solid white;
+}
+.btn-primaria:hover {
+  background-color: white;
+  color: #5de8b7;
+  transition: 0.6s;
+}
+.btn-secundario {
+  background-color: #5de8b7;
+  color: white;
+  border: 1px solid #5de8b7;
+}
+.btn-secundario:hover {
+  background-color: white;
+  color: #5de8b7;
+  border: 1px solid #5de8b7;
+  transition: 0.6s;
+}
+.primeira-coluna {
+  text-align: center;
+  width: 40%;
+  z-index: 10;
+}
+.segunda-coluna {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-midia {
+  margin: 10px 0px;
+}
+.lista_midias {
+  display: flex;
+  list-style-type: none;
+}
+.item-midias {
+  border: 1px solid grey;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: gray;
+}
+
+.link-midia:not(:first-child) {
+  margin-left: 10px;
+}
+.link-midia:hover .item-midias {
+  background-color: #5de8b7;
+  color: white;
+  border-color: #5de8b7;
+  transition: 0.6s;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  text-align: center;
+}
+.formulario input {
+  height: 40px;
+  border: none;
+  background-color: #cccccc;
+  width: 100%;
+}
+.lab-input {
+  background-color: #cccccc;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+.icon-mod {
+  color: #8a8a8a;
+  padding: 0px 7px;
+}
+
+/*segunda parte*/
+
+.cont-login {
+  position: absolute;
+  display: flex;
+}
+.cont-login .primeira-coluna {
+  order: 2;
+  z-index: -1;
+}
+.cont-login .segunda-coluna {
+  order: 1;
+  z-index: -1;
+}
+.passowrd {
+  color: #cccccc;
+  font-size: 15px;
+  margin: 10px 0px;
+}
+.passowrd:hover {
+  color: #8a8a8a;
+}
+/*transicao entre classes body*/
+.sign-in-js .cont-cadastro .primeira-coluna {
+  z-index: -1;
+}
+
+.sign-in-js .cont-login .segunda-coluna {
+  z-index: 11;
+}
+.sign-in-js .cont-login .primeira-coluna {
+  z-index: 13;
+}
+.sign-in-js .cont::before {
+  left: 60%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  animation: correr 2.5s;
+  z-index: 12;
+}
+.sign-up-js .cont::before {
+  animation: voltar 2.5s;
+  z-index: 12;
+}
+/*inversao*/
+.sign-up-js .cont-login .primeira-coluna {
+  z-index: -1;
+}
+
+.sign-up-js .cont-cadastro .segunda-coluna {
+  z-index: 12;
+}
+.sign-up-js .cont-cadastro .primeira-coluna {
+  z-index: 13;
+}
+/*fundo animacao css*/
+.sign-in-js .cont-cadastro .segunda-coluna {
+  z-index: -1;
+  position: relative;
+  animation: fundocorre 1s;
+}
+.sign-up-js .cont-login .segunda-coluna {
+  z-index: -1;
+  position: relative;
+  animation: fundovolta 1s;
+}
+/*animaçao do css*/
+
+@keyframes correr {
+  from {
+    left: 0;
+    width: 40%;
+  }
+  50% {
+    left: 30%;
+    width: 70%;
+  }
+  to {
+    left: 60%;
+    width: 40%;
+  }
+}
+@keyframes voltar {
+  from {
+    left: 60%;
+    width: 40%;
+  }
+  50% {
+    left: 0%;
+    width: 70%;
+  }
+  to {
+    left: 0;
+    width: 40%;
+  }
+}
+/*deslocamento fundo*/
+@keyframes fundocorre {
+  from {
+    left: 0;
+    opacity: .8;
+    z-index: 12;
+  }
+  50% {
+    left: -75px;
+    opacity: 0.3;
+  }
+  to {
+    left: -150px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes fundovolta {
+  from {
+    left: 0;
+    z-index: 12;
+    opacity: .8;
+  }
+  50% {
+    left: 75px;
+    opacity: 0.3;
+  }
+  to {
+    left: 150px;
+    z-index: -1;
+    opacity: 0;
+  }
+}
