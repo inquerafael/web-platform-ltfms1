@@ -12,13 +12,14 @@ body {
   --cor-fundo-temporario: #9cd1ff;
 }
 .header {
-    background-color: #f2f2f2;
+    background-color: var(--cor-menus);
     text-align: center;
     padding: 20px;
 }
 .menu {
   overflow: hidden;
   background-color: var(--cor-menus);
+  box-shadow: 0px 2px 6px black;
 }
 .menu a {
   float: left;
