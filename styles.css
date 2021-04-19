@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2? family = Pacifico & display = swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,25 +16,37 @@ body {
     background-color: var(--cor-menus);
     text-align: center;
     padding: 20px;
+    
+}
+.logo {
+  font-size: 150%;
+  font-weight: bold;
+  
+  color: white;
+
 }
 .menu {
   overflow: hidden;
   background-color: var(--cor-menus);
-  box-shadow: 0px 2px 6px black;
+  box-shadow: 0px 2px 6px #4b695e;
 }
 .menu a {
   float: left;
   display: block;
   color: var(--cor-botoes);
   text-align: center;
-  padding: 15px 10px;
+  padding: 13px 10px;
   text-decoration: none;
+  border: 1px solid var(--cor-botoes);
+  border-radius: 50px;
+  
 }
 .menu a:hover {
   background-color: var(--cor-botoes);
-  color: black;
-  opacity: 0.6;
+  color: var(--cor-menus);
+  
   transition: 0.6s;
+  border: 1px solid var(--cor-menus);
 }
 .conteudo {
   color: white;
@@ -42,6 +55,23 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
+}
+.btn {
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: var(--cor-menus);
+  color: white;
+  font-size: 10px;
+  padding: 10px 50px;
+  font-weight: bold;
+  align-self: center;
+  border: none;
+  margin-top: 1rem;
+}
+.btn:hover {
+  background-color: var(--cor-botoes);
+  color: var(--cor-menus);
+  transition: 0.6s;
 }
 .icones {
   overflow: hidden;
@@ -57,8 +87,8 @@ body {
 }
 .icones a:hover {
   background-color: var(--cor-botoes);
-  color: black;
-  opacity: 0.6;
+  color: var(--cor-menus);
+  
 }
 #rodape{    
     background:var(--cor-menus);
